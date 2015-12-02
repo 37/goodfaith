@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    // Main index page PRE-LOGIN
+    #main
+
+    // Sidebar
+    section#sidebar.fixed
+        // Intro
+        section#intro
+            header
+                h2 Good Faith Trade
+                p
+                    | Connecting your audience to the content they crave. By
+                    a(href="http://black.ai") black
+        // login form
+        form#login-form.form-horizontal(method='POST')
+            input(type='hidden', name='_csrf', value=_csrf)
+            .form-group.login-social
+                .col-sm-offset-3.col-sm-7
+                    h3 One Click Login
+                    a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+                        i.fa.fa-facebook
+                        |   Facebook
+                    a.btn.btn-block.btn-twitter.btn-social(href='/auth/twitter')
+                        i.fa.fa-twitter
+                        |   Twitter
+                    a.btn.btn-block.btn-linkedin.btn-social(href='/auth/linkedin')
+                        i.fa.fa-linkedin
+                        |   LinkedIn
+
+
+
+block footerscripts
+    script(type="text/javascript").

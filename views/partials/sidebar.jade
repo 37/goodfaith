@@ -1,0 +1,57 @@
+// Sidebar
+section#sidebar
+    // Intro
+    section#intro
+        header
+            h2 Good Faith Trade
+            p
+                | Connecting your audience to the content they crave. By
+                a(href="http://black.ai") black
+    // Mini Posts
+    section
+        .mini-posts
+            // Mini Post
+            article.mini-post.action-btn.active(data-link="have")
+                header
+                    h3 I can spare
+                    a.author(href='#')
+                        i.material-icons favorite
+
+            // Mini Post
+            article.mini-post.action-btn(data-link="need")
+                header
+                    h3 I need
+                    a.author(href='#')
+                        i.material-icons favorite_border
+
+            // Mini Post
+            article.mini-post.action-btn(data-link="deliver")
+                header
+                    h3 I can deliver
+                    a.author(href='#')
+                        i.material-icons directions_boat
+
+            // Mini Post
+            article.mini-post.action-btn(data-link="settings")
+                header
+                    h3 Settings
+                    a.author(href='#')
+                        i.material-icons settings
+
+
+    // Footer
+    section#footer
+        ul.icons
+            li
+                a.fa-twitter(href='http://twitter.com/RGBA0001')
+                    span.label Twitter
+            li
+                a.fa-facebook(href='http://facebook.com/RGBA0001')
+                    span.label Facebook
+            li
+                a.fa-envelope(href='media@black.ai')
+                    span.label Email
+        p.copyright
+            | ©
+            a(href="http://black.ai") Black
+            | | We make cool stuff because we can
