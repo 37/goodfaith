@@ -1,40 +1,53 @@
-.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='/')
-        i.fa.fa-cube
-        | Project name
-    .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li(class=title=='Home'?'active':undefined)
-          a(href='/') Home
-        li(class=title=='API Examples'?'active':undefined)
-          a(href='/api') API Examples
-        li(class=title=='Contact'?'active':undefined)
-          a(href='/contact') Contact
-      ul.nav.navbar-nav.navbar-right
-        if !user
-          li(class=title=='Login'?'active':undefined)
-            a(href='/login') Login
-          li(class=title=='Create Account'?'active':undefined)
-            a(href='/signup') Create Account
-        else
-          li.dropdown(class=title=='Account Management'?'active':undefined)
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              if user.profile.picture
-                img(src='#{user.profile.picture}')
-              else
-                img(src='#{user.gravatar(60)}')
-              | #{user.profile.name || user.email || user.id}&nbsp;
-              i.caret
-            ul.dropdown-menu
-              li
-                a(href='/account') My Account
-              li.divider
-              li
-                a(href='/logout') Logout
+header#header
+    h1
+        a(href='#') Good faith trade
+    nav.links
+        ul
+            li
+                a(href='#') Home
+            li
+                a(href='#') About
+            li
+                a(href='#') Help
+            li
+                a(href='#') Pricing
+            li
+                a(href='#') Contact
+    nav.main
+        ul
+            li.search
+                a.fa-search(href='#search') Search
+                form#search(method='get', action='#')
+                    input(type='text', name='query', placeholder='Search')
+            li.menu
+                a.fa-bars(href='#menu') Menu
+// Menu
+section#menu
+    // Search
+    section
+        form.search(method='get', action='#')
+            input(type='text', name='query', placeholder='Search')
+    // Links
+    section
+        ul.links
+            li
+                a(href='#')
+                    h3 Lorem ipsum
+                    p Feugiat tempus veroeros dolor
+            li
+                a(href='#')
+                    h3 Dolor sit amet
+                    p Sed vitae justo condimentum
+            li
+                a(href='#')
+                    h3 Feugiat veroeros
+                    p Phasellus sed ultricies mi congue
+            li
+                a(href='#')
+                    h3 Etiam sed consequat
+                    p Porta lectus amet ultricies
+    // Actions
+    section
+        ul.actions.vertical
+            li
+                a.button.big.fit(href='/logout') Log out
